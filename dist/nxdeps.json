@@ -6,12 +6,12 @@
         "type": "e2e",
         "data": {
           "projectType": "application",
-          "root": "apps\\nx-demo-e2e",
+          "root": "apps/nx-demo-e2e",
           "architect": {
             "e2e": {
               "builder": "@angular-devkit/build-angular:protractor",
               "options": {
-                "protractorConfig": "apps\\nx-demo-e2e\\protractor.conf.js",
+                "protractorConfig": "apps/nx-demo-e2e/protractor.conf.js",
                 "devServerTarget": "nx-demo:serve"
               },
               "configurations": {
@@ -23,7 +23,7 @@
             "lint": {
               "builder": "@angular-devkit/build-angular:tslint",
               "options": {
-                "tsConfig": "apps\\nx-demo-e2e\\tsconfig.json",
+                "tsConfig": "apps/nx-demo-e2e/tsconfig.json",
                 "exclude": [
                   "**/node_modules/**"
                 ]
@@ -33,7 +33,28 @@
           "tags": [
             "type:app"
           ],
-          "files": []
+          "files": [
+            {
+              "file": "apps/nx-demo-e2e/protractor.conf.js",
+              "ext": ".js",
+              "mtime": 1619081822217.1494
+            },
+            {
+              "file": "apps/nx-demo-e2e/src/app.e2e-spec.ts",
+              "ext": ".ts",
+              "mtime": 1619081822218.148
+            },
+            {
+              "file": "apps/nx-demo-e2e/src/app.po.ts",
+              "ext": ".ts",
+              "mtime": 1619081822219.147
+            },
+            {
+              "file": "apps/nx-demo-e2e/tsconfig.json",
+              "ext": ".json",
+              "mtime": 1619081822218.148
+            }
+          ]
         }
       },
       "nx-demo": {
@@ -46,18 +67,18 @@
               "style": "scss"
             }
           },
-          "root": "apps\\nx-demo",
-          "sourceRoot": "apps\\nx-demo\\src",
+          "root": "apps/nx-demo",
+          "sourceRoot": "apps/nx-demo/src",
           "prefix": "app",
           "architect": {
             "build": {
               "builder": "@angular-devkit/build-angular:browser",
               "options": {
-                "outputPath": "dist\\apps\\nx-demo",
+                "outputPath": "dist/apps/nx-demo",
                 "index": "apps/nx-demo/src/index.html",
                 "main": "apps/nx-demo/src/main.ts",
                 "polyfills": "apps/nx-demo/src/polyfills.ts",
-                "tsConfig": "apps\\nx-demo\\tsconfig.app.json",
+                "tsConfig": "apps/nx-demo/tsconfig.app.json",
                 "aot": true,
                 "assets": [
                   "apps/nx-demo/src/favicon.ico",
@@ -120,8 +141,8 @@
               "options": {
                 "main": "apps/nx-demo/src/test.ts",
                 "polyfills": "apps/nx-demo/src/polyfills.ts",
-                "tsConfig": "apps\\nx-demo\\tsconfig.spec.json",
-                "karmaConfig": "apps\\nx-demo\\karma.conf.js",
+                "tsConfig": "apps/nx-demo/tsconfig.spec.json",
+                "karmaConfig": "apps/nx-demo/karma.conf.js",
                 "assets": [
                   "apps/nx-demo/src/favicon.ico",
                   "apps/nx-demo/src/assets"
@@ -136,8 +157,8 @@
               "builder": "@angular-devkit/build-angular:tslint",
               "options": {
                 "tsConfig": [
-                  "apps\\nx-demo\\tsconfig.app.json",
-                  "apps\\nx-demo\\tsconfig.spec.json"
+                  "apps/nx-demo/tsconfig.app.json",
+                  "apps/nx-demo/tsconfig.spec.json"
                 ],
                 "exclude": [
                   "**/node_modules/**"
@@ -148,7 +169,138 @@
           "tags": [
             "type:app"
           ],
-          "files": []
+          "files": [
+            {
+              "file": "apps/nx-demo/karma.conf.js",
+              "ext": ".js",
+              "mtime": 1619081822206.161
+            },
+            {
+              "file": "apps/nx-demo/src/app/app.component.html",
+              "ext": ".html",
+              "mtime": 1619082201032.121
+            },
+            {
+              "file": "apps/nx-demo/src/app/app.component.scss",
+              "ext": ".scss",
+              "mtime": 1619081822210.1572
+            },
+            {
+              "file": "apps/nx-demo/src/app/app.component.spec.ts",
+              "ext": ".ts",
+              "mtime": 1619081822211.1553
+            },
+            {
+              "file": "apps/nx-demo/src/app/app.component.ts",
+              "ext": ".ts",
+              "mtime": 1619081822211.1553
+            },
+            {
+              "file": "apps/nx-demo/src/app/app.module.ts",
+              "ext": ".ts",
+              "mtime": 1619082154468.8555
+            },
+            {
+              "file": "apps/nx-demo/src/app/todos/todos/todo/todo.component.html",
+              "ext": ".html",
+              "mtime": 1619081822214.1528
+            },
+            {
+              "file": "apps/nx-demo/src/app/todos/todos/todo/todo.component.scss",
+              "ext": ".scss",
+              "mtime": 1619081822214.1528
+            },
+            {
+              "file": "apps/nx-demo/src/app/todos/todos/todo/todo.component.spec.ts",
+              "ext": ".ts",
+              "mtime": 1619081822215.1514
+            },
+            {
+              "file": "apps/nx-demo/src/app/todos/todos/todo/todo.component.ts",
+              "ext": ".ts",
+              "mtime": 1619081822215.1514
+            },
+            {
+              "file": "apps/nx-demo/src/app/todos/todos/todos.component.html",
+              "ext": ".html",
+              "mtime": 1619082154439.8882
+            },
+            {
+              "file": "apps/nx-demo/src/app/todos/todos/todos.component.scss",
+              "ext": ".scss",
+              "mtime": 1619081822213.1543
+            },
+            {
+              "file": "apps/nx-demo/src/app/todos/todos/todos.component.spec.ts",
+              "ext": ".ts",
+              "mtime": 1619081822213.1543
+            },
+            {
+              "file": "apps/nx-demo/src/app/todos/todos/todos.component.ts",
+              "ext": ".ts",
+              "mtime": 1619081822214.1528
+            },
+            {
+              "file": "apps/nx-demo/src/app/todos/todos.module.ts",
+              "ext": ".ts",
+              "mtime": 1619082154453.8745
+            },
+            {
+              "file": "apps/nx-demo/src/assets/.gitkeep",
+              "ext": "",
+              "mtime": 1619081822216.15
+            },
+            {
+              "file": "apps/nx-demo/src/environments/environment.prod.ts",
+              "ext": ".ts",
+              "mtime": 1619081822216.15
+            },
+            {
+              "file": "apps/nx-demo/src/environments/environment.ts",
+              "ext": ".ts",
+              "mtime": 1619081822217.1494
+            },
+            {
+              "file": "apps/nx-demo/src/favicon.ico",
+              "ext": ".ico",
+              "mtime": 1619081822207.1592
+            },
+            {
+              "file": "apps/nx-demo/src/index.html",
+              "ext": ".html",
+              "mtime": 1619081822208.1592
+            },
+            {
+              "file": "apps/nx-demo/src/main.ts",
+              "ext": ".ts",
+              "mtime": 1619081822208.1592
+            },
+            {
+              "file": "apps/nx-demo/src/polyfills.ts",
+              "ext": ".ts",
+              "mtime": 1619081822209.1584
+            },
+            {
+              "file": "apps/nx-demo/src/styles.scss",
+              "ext": ".scss",
+              "mtime": 1619081822209.1584
+            },
+            {
+              "file": "apps/nx-demo/src/test.ts",
+              "ext": ".ts",
+              "mtime": 1619081822210.1572
+            },
+            {
+              "file": "apps/nx-demo/tsconfig.app.json",
+              "ext": ".json",
+              "mtime": 1619081822205.1619
+            },
+            {
+              "file": "apps/nx-demo/tsconfig.spec.json",
+              "ext": ".json",
+              "mtime": 1619081822206.161
+            }
+          ]
         }
       },
       "@angular/animations": {
@@ -414,9 +566,40 @@
           "type": "implicit",
           "source": "nx-demo-e2e",
           "target": "nx-demo"
+        },
+        {
+          "type": "static",
+          "source": "nx-demo-e2e",
+          "target": "protractor"
         }
       ],
-      "nx-demo": [],
+      "nx-demo": [
+        {
+          "type": "static",
+          "source": "nx-demo",
+          "target": "@angular/core"
+        },
+        {
+          "type": "static",
+          "source": "nx-demo",
+          "target": "@angular/platform-browser"
+        },
+        {
+          "type": "static",
+          "source": "nx-demo",
+          "target": "@angular/common"
+        },
+        {
+          "type": "static",
+          "source": "nx-demo",
+          "target": "@angular/platform-browser-dynamic"
+        },
+        {
+          "type": "static",
+          "source": "nx-demo",
+          "target": "zone.js"
+        }
+      ],
       "@angular/animations": [],
       "@angular/common": [],
       "@angular/compiler": [],
@@ -452,7 +635,159 @@
     }
   },
   "fileMap": {
-    "nx-demo-e2e": [],
-    "nx-demo": []
+    "nx-demo-e2e": [
+      {
+        "file": "apps/nx-demo-e2e/protractor.conf.js",
+        "ext": ".js",
+        "mtime": 1619081822217.1494
+      },
+      {
+        "file": "apps/nx-demo-e2e/src/app.e2e-spec.ts",
+        "ext": ".ts",
+        "mtime": 1619081822218.148
+      },
+      {
+        "file": "apps/nx-demo-e2e/src/app.po.ts",
+        "ext": ".ts",
+        "mtime": 1619081822219.147
+      },
+      {
+        "file": "apps/nx-demo-e2e/tsconfig.json",
+        "ext": ".json",
+        "mtime": 1619081822218.148
+      }
+    ],
+    "nx-demo": [
+      {
+        "file": "apps/nx-demo/karma.conf.js",
+        "ext": ".js",
+        "mtime": 1619081822206.161
+      },
+      {
+        "file": "apps/nx-demo/src/app/app.component.html",
+        "ext": ".html",
+        "mtime": 1619082201032.121
+      },
+      {
+        "file": "apps/nx-demo/src/app/app.component.scss",
+        "ext": ".scss",
+        "mtime": 1619081822210.1572
+      },
+      {
+        "file": "apps/nx-demo/src/app/app.component.spec.ts",
+        "ext": ".ts",
+        "mtime": 1619081822211.1553
+      },
+      {
+        "file": "apps/nx-demo/src/app/app.component.ts",
+        "ext": ".ts",
+        "mtime": 1619081822211.1553
+      },
+      {
+        "file": "apps/nx-demo/src/app/app.module.ts",
+        "ext": ".ts",
+        "mtime": 1619082154468.8555
+      },
+      {
+        "file": "apps/nx-demo/src/app/todos/todos/todo/todo.component.html",
+        "ext": ".html",
+        "mtime": 1619081822214.1528
+      },
+      {
+        "file": "apps/nx-demo/src/app/todos/todos/todo/todo.component.scss",
+        "ext": ".scss",
+        "mtime": 1619081822214.1528
+      },
+      {
+        "file": "apps/nx-demo/src/app/todos/todos/todo/todo.component.spec.ts",
+        "ext": ".ts",
+        "mtime": 1619081822215.1514
+      },
+      {
+        "file": "apps/nx-demo/src/app/todos/todos/todo/todo.component.ts",
+        "ext": ".ts",
+        "mtime": 1619081822215.1514
+      },
+      {
+        "file": "apps/nx-demo/src/app/todos/todos/todos.component.html",
+        "ext": ".html",
+        "mtime": 1619082154439.8882
+      },
+      {
+        "file": "apps/nx-demo/src/app/todos/todos/todos.component.scss",
+        "ext": ".scss",
+        "mtime": 1619081822213.1543
+      },
+      {
+        "file": "apps/nx-demo/src/app/todos/todos/todos.component.spec.ts",
+        "ext": ".ts",
+        "mtime": 1619081822213.1543
+      },
+      {
+        "file": "apps/nx-demo/src/app/todos/todos/todos.component.ts",
+        "ext": ".ts",
+        "mtime": 1619081822214.1528
+      },
+      {
+        "file": "apps/nx-demo/src/app/todos/todos.module.ts",
+        "ext": ".ts",
+        "mtime": 1619082154453.8745
+      },
+      {
+        "file": "apps/nx-demo/src/assets/.gitkeep",
+        "ext": "",
+        "mtime": 1619081822216.15
+      },
+      {
+        "file": "apps/nx-demo/src/environments/environment.prod.ts",
+        "ext": ".ts",
+        "mtime": 1619081822216.15
+      },
+      {
+        "file": "apps/nx-demo/src/environments/environment.ts",
+        "ext": ".ts",
+        "mtime": 1619081822217.1494
+      },
+      {
+        "file": "apps/nx-demo/src/favicon.ico",
+        "ext": ".ico",
+        "mtime": 1619081822207.1592
+      },
+      {
+        "file": "apps/nx-demo/src/index.html",
+        "ext": ".html",
+        "mtime": 1619081822208.1592
+      },
+      {
+        "file": "apps/nx-demo/src/main.ts",
+        "ext": ".ts",
+        "mtime": 1619081822208.1592
+      },
+      {
+        "file": "apps/nx-demo/src/polyfills.ts",
+        "ext": ".ts",
+        "mtime": 1619081822209.1584
+      },
+      {
+        "file": "apps/nx-demo/src/styles.scss",
+        "ext": ".scss",
+        "mtime": 1619081822209.1584
+      },
+      {
+        "file": "apps/nx-demo/src/test.ts",
+        "ext": ".ts",
+        "mtime": 1619081822210.1572
+      },
+      {
+        "file": "apps/nx-demo/tsconfig.app.json",
+        "ext": ".json",
+        "mtime": 1619081822205.1619
+      },
+      {
+        "file": "apps/nx-demo/tsconfig.spec.json",
+        "ext": ".json",
+        "mtime": 1619081822206.161
+      }
+    ]
   }
 }
