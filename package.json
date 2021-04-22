@@ -61,6 +61,11 @@
     "tslint": "~6.1.0",
     "typescript": "~4.1.5",
     "@nrwl/workspace": "8.12.11",
-    "prettier": "1.18.2"
+    "prettier": "1.18.2",
+    "jest-preset-angular": "7.0.0",
+    "@nrwl/jest": "8.12.11",
+    "jest": "24.1.0",
+    "@types/jest": "24.0.9",
+    "ts-jest": "24.0.0"
   }
 }
