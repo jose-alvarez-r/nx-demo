@@ -6,12 +6,15 @@ import { TodoComponent } from './todos/todo/todo.component';
 
 
 @NgModule({
-  declarations: [
-    TodosComponent,
-    TodoComponent
-  ],
-  imports: [
-    CommonModule
-  ]
+    declarations: [
+        TodosComponent,
+        TodoComponent
+    ],
+    exports: [
+        TodosComponent
+    ],
+    imports: [
+        CommonModule
+    ]
 })
 export class TodosModule { }
