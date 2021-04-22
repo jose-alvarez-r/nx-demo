@@ -1,6 +1,138 @@
 {
   "projectGraph": {
     "nodes": {
+      "features-todos": {
+        "name": "features-todos",
+        "type": "lib",
+        "data": {
+          "projectType": "library",
+          "root": "libs/features/todos",
+          "sourceRoot": "libs/features/todos/src",
+          "prefix": "nx-demo",
+          "architect": {
+            "lint": {
+              "builder": "@angular-devkit/build-angular:tslint",
+              "options": {
+                "tsConfig": [
+                  "libs/features/todos/tsconfig.lib.json",
+                  "libs/features/todos/tsconfig.spec.json"
+                ],
+                "exclude": [
+                  "**/node_modules/**",
+                  "!libs/features/todos/**"
+                ]
+              }
+            },
+            "test": {
+              "builder": "@nrwl/jest:jest",
+              "options": {
+                "jestConfig": "libs/features/todos/jest.config.js",
+                "tsConfig": "libs/features/todos/tsconfig.spec.json",
+                "setupFile": "libs/features/todos/src/test-setup.ts"
+              }
+            }
+          },
+          "schematics": {},
+          "tags": [],
+          "files": [
+            {
+              "file": "libs/features/todos/jest.config.js",
+              "ext": ".js",
+              "mtime": 1619087837227.7852
+            },
+            {
+              "file": "libs/features/todos/README.md",
+              "ext": ".md",
+              "mtime": 1619087837221.7944
+            },
+            {
+              "file": "libs/features/todos/src/index.ts",
+              "ext": ".ts",
+              "mtime": 1619087837224.7893
+            },
+            {
+              "file": "libs/features/todos/src/lib/features-todos.module.spec.ts",
+              "ext": ".ts",
+              "mtime": 1619087837225.7876
+            },
+            {
+              "file": "libs/features/todos/src/lib/features-todos.module.ts",
+              "ext": ".ts",
+              "mtime": 1619088087017.695
+            },
+            {
+              "file": "libs/features/todos/src/lib/todos/todo/todo.component.html",
+              "ext": ".html",
+              "mtime": 1619086603429.7776
+            },
+            {
+              "file": "libs/features/todos/src/lib/todos/todo/todo.component.scss",
+              "ext": ".scss",
+              "mtime": 1619086603429.7776
+            },
+            {
+              "file": "libs/features/todos/src/lib/todos/todo/todo.component.spec.ts",
+              "ext": ".ts",
+              "mtime": 1619086603430.7764
+            },
+            {
+              "file": "libs/features/todos/src/lib/todos/todo/todo.component.ts",
+              "ext": ".ts",
+              "mtime": 1619086603430.7764
+            },
+            {
+              "file": "libs/features/todos/src/lib/todos/todos.component.html",
+              "ext": ".html",
+              "mtime": 1619086603426.7795
+            },
+            {
+              "file": "libs/features/todos/src/lib/todos/todos.component.scss",
+              "ext": ".scss",
+              "mtime": 1619086603427.7798
+            },
+            {
+              "file": "libs/features/todos/src/lib/todos/todos.component.spec.ts",
+              "ext": ".ts",
+              "mtime": 1619086603428.7783
+            },
+            {
+              "file": "libs/features/todos/src/lib/todos/todos.component.ts",
+              "ext": ".ts",
+              "mtime": 1619086603428.7783
+            },
+            {
+              "file": "libs/features/todos/src/test-setup.ts",
+              "ext": ".ts",
+              "mtime": 1619087837227.7852
+            },
+            {
+              "file": "libs/features/todos/tsconfig.json",
+              "ext": ".json",
+              "mtime": 1619087837226.786
+            },
+            {
+              "file": "libs/features/todos/tsconfig.lib.json",
+              "ext": ".json",
+              "mtime": 1619087837222.7913
+            },
+            {
+              "file": "libs/features/todos/tsconfig.lib.prod.json",
+              "ext": ".json",
+              "mtime": 1619087837222.7913
+            },
+            {
+              "file": "libs/features/todos/tsconfig.spec.json",
+              "ext": ".json",
+              "mtime": 1619087837226.786
+            },
+            {
+              "file": "libs/features/todos/tslint.json",
+              "ext": ".json",
+              "mtime": 1619087837223.792
+            }
+          ]
+        }
+      },
       "nx-demo-e2e": {
         "name": "nx-demo-e2e",
         "type": "e2e",
@@ -178,7 +310,7 @@
             {
               "file": "apps/nx-demo/src/app/app.component.html",
               "ext": ".html",
-              "mtime": 1619086603423.7817
+              "mtime": 1619087042406.8904
             },
             {
               "file": "apps/nx-demo/src/app/app.component.scss",
@@ -198,52 +330,7 @@
             {
               "file": "apps/nx-demo/src/app/app.module.ts",
               "ext": ".ts",
-              "mtime": 1619086603425.781
-            },
-            {
-              "file": "apps/nx-demo/src/app/todos/todos/todo/todo.component.html",
-              "ext": ".html",
-              "mtime": 1619086603429.7776
-            },
-            {
-              "file": "apps/nx-demo/src/app/todos/todos/todo/todo.component.scss",
-              "ext": ".scss",
-              "mtime": 1619086603429.7776
-            },
-            {
-              "file": "apps/nx-demo/src/app/todos/todos/todo/todo.component.spec.ts",
-              "ext": ".ts",
-              "mtime": 1619086603430.7764
-            },
-            {
-              "file": "apps/nx-demo/src/app/todos/todos/todo/todo.component.ts",
-              "ext": ".ts",
-              "mtime": 1619086603430.7764
-            },
-            {
-              "file": "apps/nx-demo/src/app/todos/todos/todos.component.html",
-              "ext": ".html",
-              "mtime": 1619086603426.7795
-            },
-            {
-              "file": "apps/nx-demo/src/app/todos/todos/todos.component.scss",
-              "ext": ".scss",
-              "mtime": 1619086603427.7798
-            },
-            {
-              "file": "apps/nx-demo/src/app/todos/todos/todos.component.spec.ts",
-              "ext": ".ts",
-              "mtime": 1619086603428.7783
-            },
-            {
-              "file": "apps/nx-demo/src/app/todos/todos/todos.component.ts",
-              "ext": ".ts",
-              "mtime": 1619086603428.7783
-            },
-            {
-              "file": "apps/nx-demo/src/app/todos/todos.module.ts",
-              "ext": ".ts",
-              "mtime": 1619086603426.7795
+              "mtime": 1619088260970.1978
             },
             {
               "file": "apps/nx-demo/src/assets/.gitkeep",
@@ -550,9 +637,66 @@
           "version": "1.18.2",
           "files": []
         }
+      },
+      "jest-preset-angular": {
+        "type": "npm",
+        "name": "jest-preset-angular",
+        "data": {
+          "version": "7.0.0",
+          "files": []
+        }
+      },
+      "@nrwl/jest": {
+        "type": "npm",
+        "name": "@nrwl/jest",
+        "data": {
+          "version": "8.12.11",
+          "files": []
+        }
+      },
+      "jest": {
+        "type": "npm",
+        "name": "jest",
+        "data": {
+          "version": "24.1.0",
+          "files": []
+        }
+      },
+      "@types/jest": {
+        "type": "npm",
+        "name": "@types/jest",
+        "data": {
+          "version": "24.0.9",
+          "files": []
+        }
+      },
+      "ts-jest": {
+        "type": "npm",
+        "name": "ts-jest",
+        "data": {
+          "version": "24.0.0",
+          "files": []
+        }
       }
     },
     "dependencies": {
+      "features-todos": [
+        {
+          "type": "static",
+          "source": "features-todos",
+          "target": "@angular/core"
+        },
+        {
+          "type": "static",
+          "source": "features-todos",
+          "target": "@angular/common"
+        },
+        {
+          "type": "static",
+          "source": "features-todos",
+          "target": "jest-preset-angular"
+        }
+      ],
       "nx-demo-e2e": [
         {
           "type": "implicit",
@@ -569,17 +713,17 @@
         {
           "type": "static",
           "source": "nx-demo",
+          "target": "features-todos"
+        },
+        {
+          "type": "static",
+          "source": "nx-demo",
           "target": "@angular/core"
         },
         {
           "type": "static",
           "source": "nx-demo",
           "target": "@angular/platform-browser"
-        },
-        {
-          "type": "static",
-          "source": "nx-demo",
-          "target": "@angular/common"
         },
         {
           "type": "static",
@@ -622,10 +766,112 @@
       "tslint": [],
       "typescript": [],
       "@nrwl/workspace": [],
-      "prettier": []
+      "prettier": [],
+      "jest-preset-angular": [],
+      "@nrwl/jest": [],
+      "jest": [],
+      "@types/jest": [],
+      "ts-jest": []
     }
   },
   "fileMap": {
+    "features-todos": [
+      {
+        "file": "libs/features/todos/jest.config.js",
+        "ext": ".js",
+        "mtime": 1619087837227.7852
+      },
+      {
+        "file": "libs/features/todos/README.md",
+        "ext": ".md",
+        "mtime": 1619087837221.7944
+      },
+      {
+        "file": "libs/features/todos/src/index.ts",
+        "ext": ".ts",
+        "mtime": 1619087837224.7893
+      },
+      {
+        "file": "libs/features/todos/src/lib/features-todos.module.spec.ts",
+        "ext": ".ts",
+        "mtime": 1619087837225.7876
+      },
+      {
+        "file": "libs/features/todos/src/lib/features-todos.module.ts",
+        "ext": ".ts",
+        "mtime": 1619088087017.695
+      },
+      {
+        "file": "libs/features/todos/src/lib/todos/todo/todo.component.html",
+        "ext": ".html",
+        "mtime": 1619086603429.7776
+      },
+      {
+        "file": "libs/features/todos/src/lib/todos/todo/todo.component.scss",
+        "ext": ".scss",
+        "mtime": 1619086603429.7776
+      },
+      {
+        "file": "libs/features/todos/src/lib/todos/todo/todo.component.spec.ts",
+        "ext": ".ts",
+        "mtime": 1619086603430.7764
+      },
+      {
+        "file": "libs/features/todos/src/lib/todos/todo/todo.component.ts",
+        "ext": ".ts",
+        "mtime": 1619086603430.7764
+      },
+      {
+        "file": "libs/features/todos/src/lib/todos/todos.component.html",
+        "ext": ".html",
+        "mtime": 1619086603426.7795
+      },
+      {
+        "file": "libs/features/todos/src/lib/todos/todos.component.scss",
+        "ext": ".scss",
+        "mtime": 1619086603427.7798
+      },
+      {
+        "file": "libs/features/todos/src/lib/todos/todos.component.spec.ts",
+        "ext": ".ts",
+        "mtime": 1619086603428.7783
+      },
+      {
+        "file": "libs/features/todos/src/lib/todos/todos.component.ts",
+        "ext": ".ts",
+        "mtime": 1619086603428.7783
+      },
+      {
+        "file": "libs/features/todos/src/test-setup.ts",
+        "ext": ".ts",
+        "mtime": 1619087837227.7852
+      },
+      {
+        "file": "libs/features/todos/tsconfig.json",
+        "ext": ".json",
+        "mtime": 1619087837226.786
+      },
+      {
+        "file": "libs/features/todos/tsconfig.lib.json",
+        "ext": ".json",
+        "mtime": 1619087837222.7913
+      },
+      {
+        "file": "libs/features/todos/tsconfig.lib.prod.json",
+        "ext": ".json",
+        "mtime": 1619087837222.7913
+      },
+      {
+        "file": "libs/features/todos/tsconfig.spec.json",
+        "ext": ".json",
+        "mtime": 1619087837226.786
+      },
+      {
+        "file": "libs/features/todos/tslint.json",
+        "ext": ".json",
+        "mtime": 1619087837223.792
+      }
+    ],
     "nx-demo-e2e": [
       {
         "file": "apps/nx-demo-e2e/protractor.conf.js",
@@ -657,7 +903,7 @@
       {
         "file": "apps/nx-demo/src/app/app.component.html",
         "ext": ".html",
-        "mtime": 1619086603423.7817
+        "mtime": 1619087042406.8904
       },
       {
         "file": "apps/nx-demo/src/app/app.component.scss",
@@ -677,52 +923,7 @@
       {
         "file": "apps/nx-demo/src/app/app.module.ts",
         "ext": ".ts",
-        "mtime": 1619086603425.781
-      },
-      {
-        "file": "apps/nx-demo/src/app/todos/todos/todo/todo.component.html",
-        "ext": ".html",
-        "mtime": 1619086603429.7776
-      },
-      {
-        "file": "apps/nx-demo/src/app/todos/todos/todo/todo.component.scss",
-        "ext": ".scss",
-        "mtime": 1619086603429.7776
-      },
-      {
-        "file": "apps/nx-demo/src/app/todos/todos/todo/todo.component.spec.ts",
-        "ext": ".ts",
-        "mtime": 1619086603430.7764
-      },
-      {
-        "file": "apps/nx-demo/src/app/todos/todos/todo/todo.component.ts",
-        "ext": ".ts",
-        "mtime": 1619086603430.7764
-      },
-      {
-        "file": "apps/nx-demo/src/app/todos/todos/todos.component.html",
-        "ext": ".html",
-        "mtime": 1619086603426.7795
-      },
-      {
-        "file": "apps/nx-demo/src/app/todos/todos/todos.component.scss",
-        "ext": ".scss",
-        "mtime": 1619086603427.7798
-      },
-      {
-        "file": "apps/nx-demo/src/app/todos/todos/todos.component.spec.ts",
-        "ext": ".ts",
-        "mtime": 1619086603428.7783
-      },
-      {
-        "file": "apps/nx-demo/src/app/todos/todos/todos.component.ts",
-        "ext": ".ts",
-        "mtime": 1619086603428.7783
-      },
-      {
-        "file": "apps/nx-demo/src/app/todos/todos.module.ts",
-        "ext": ".ts",
-        "mtime": 1619086603426.7795
+        "mtime": 1619088260970.1978
       },
       {
         "file": "apps/nx-demo/src/assets/.gitkeep",

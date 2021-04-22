@@ -27,9 +27,7 @@
               "apps/nx-demo/src/favicon.ico",
               "apps/nx-demo/src/assets"
             ],
-            "styles": [
-              "apps/nx-demo/src/styles.scss"
-            ],
+            "styles": ["apps/nx-demo/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -90,9 +88,7 @@
               "apps/nx-demo/src/favicon.ico",
               "apps/nx-demo/src/assets"
             ],
-            "styles": [
-              "apps/nx-demo/src/styles.scss"
-            ],
+            "styles": ["apps/nx-demo/src/styles.scss"],
             "scripts": []
           }
         },
@@ -103,9 +99,7 @@
               "apps/nx-demo/tsconfig.app.json",
               "apps/nx-demo/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -130,12 +124,37 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "apps/nx-demo-e2e/tsconfig.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
+    },
+    "features-todos": {
+      "projectType": "library",
+      "root": "libs/features/todos",
+      "sourceRoot": "libs/features/todos/src",
+      "prefix": "nx-demo",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/features/todos/tsconfig.lib.json",
+              "libs/features/todos/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/features/todos/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/features/todos/jest.config.js",
+            "tsConfig": "libs/features/todos/tsconfig.spec.json",
+            "setupFile": "libs/features/todos/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
     }
   },
   "defaultProject": "nx-demo"
