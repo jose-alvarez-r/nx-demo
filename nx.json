@@ -1,0 +1,19 @@
+{
+  "npmScope": "nx-demo",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": "*",
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "nx-demo": {
+      "tags": ["type:app"]
+    },
+    "nx-demo-e2e": {
+      "tags": ["type:app"],
+      "implicitDependencies": ["nx-demo"]
+    }
+  }
+}
