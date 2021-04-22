@@ -7,13 +7,21 @@
     "tslint.json": "*",
     "nx.json": "*"
   },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/src/tasks-runner/tasks-runner-v2",
+      "options": { "cacheableOperations": ["build", "test", "lint"] }
+    }
+  },
   "projects": {
+
     "nx-demo": {
       "tags": ["type:app"]
     },
     "nx-demo-e2e": {
       "tags": ["type:app"],
       "implicitDependencies": ["nx-demo"]
+
     }
   }
 }
